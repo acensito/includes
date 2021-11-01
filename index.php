@@ -5,18 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- titulo -->
     <title>Mejorando Include en PHP</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="#">
+
     <!-- css styles -->
     <!-- bootstrap 5 cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
 </head>
 
 <body>
+    <!-- inicio contador de carga -->
     <?php
-    //flag de tiempo de inicio de carga 
-    $start = microtime(true);
+        $start = microtime(true);
     ?>
+
     <!-- nav bar header -->
     <header class="container p-5 text-white bg-danger">
         <div class="row">
@@ -34,7 +40,8 @@
         </div>
     </header>
 
-    <div class="container">
+    <!-- cuerpo del documento -->
+    <div class="container text-white">
         <div class="row">
             <!-- menu lateral section -->
             <aside class="col-md-2 bg-success p-5">
@@ -54,17 +61,6 @@
                         incidunt vitae corporis, velit quae quia voluptatibus quis unde, qui eum atque laudantium maiores nisi,
                         dignissimos odit earum ea quos!
                     </p>
-
-                    <?php
-                        //incluyendo y cambiando contenido en una misma página con GET
-                        $secciones = array('about', 'header', 'index'); 
-                        $page = ( isset($_GET['page']) ) ? $_GET['page'] : 'index';
-                        if ( in_array($page, $secciones) ) {
-                            include("$page.php");
-                        } else {
-                            include('404.php');
-                        }
-                    ?>
                 </div>
             </section>
         </div>
@@ -81,8 +77,8 @@
                     <?php
                     //funcion php que muestra el tiempo que tarda en cargar la página
                     $end = microtime(true);
-                    $creationtime = ($end - $start);
-                    printf("Página renderizada en %.6f seconds.", $creationtime);
+                    $renderized = ($end - $start);
+                    printf("Página renderizada en %.6f segs.", $renderized);
                     ?>
                 </h5>
             </div>
