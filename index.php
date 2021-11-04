@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- titulo -->
@@ -33,7 +32,7 @@
                 <h2>
                     <?php
                     //funcion php que muestra la fecha actual al momento de cargar
-                    echo 'La fecha de hoy es ' . date('d-m-y', $timestamp = time());
+                    echo 'La fecha de hoy es ' . date('d-m-y', time());
                     ?>
                 </h2>
             </div>
