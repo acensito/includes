@@ -13,13 +13,13 @@
 
     <!-- css styles -->
     <!-- bootstrap 5 cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- inicio contador de carga -->
     <?php
-        $start = microtime(true);
+    $start = microtime(true);
     ?>
 
     <!-- nav bar header -->
